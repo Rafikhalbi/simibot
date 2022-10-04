@@ -21,7 +21,7 @@ class SimiBot:
             if mess in['stopchat','Stopchat','STOPCHAT']:exit(
                     f'{Fore.YELLOW}simi{Fore.BLUE}: {Fore.WHITE}Byeee....'
                     )
-            get_chat = get(f'https://api.simsimi.net/v2/?text={mess}&lc=id&cf=false')
+            get_chat = get(f'https://api.simsimi.net/v2/?text={mess}&lc=id')
             result = re.search(r'{"methods":"GET","success":"(.*?)","noti":"MeoCop#5555"',get_chat.text)[1]
             echo(
                     f'{Fore.YELLOW}simi{Fore.BLUE}: {Fore.WHITE}{result}'
